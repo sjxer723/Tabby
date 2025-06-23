@@ -1,0 +1,7 @@
+[submodule "halo2_backend"]
+	path = halo2_backend
+	url = https://github.com/sjxer723/halo2_backend
+[submodule "noir-halo2-backend"]
+	path = noir-halo2-backend
+	url = https://github.com/UCSB-PLSE/noir-halo2-backend
+	branch = zkcomp
