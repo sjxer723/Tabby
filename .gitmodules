@@ -6,3 +6,6 @@
 	path = noir-halo2-backend
 	url = https://github.com/UCSB-PLSE/noir-halo2-backend
 	branch = zkcomp
+[submodule "ZKCompiler"]
+	path = ZKCompiler
+	url = git@github.com:UCSB-PLSE/ZKCompiler.git
