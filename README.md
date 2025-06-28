@@ -8,7 +8,7 @@
 This directory contains the artifact for the OOPSLA 2025 submission "Tabby: A Synthesis-Aided Compiler for High-Performance Zero-Knowledge Proof Circuits".
 
 ## Hardware Dependencies
-We have tested the artifact on a MacBook Pro (M1 Pro, 16 GB RAM) with macOS version 14.2.1. The docker file provided in this directory is designed to run on a Linux environment. 
+We have tested the artifact on a MacBook Pro (M1 Pro, 16 GB RAM) with macOS version 14.2.1.
 
 ## Getting Started
 
