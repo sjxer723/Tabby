@@ -1,0 +1,23 @@
+22d21
+< /// Measures a circuit to determine its costs, and explain what contributes to them.
+41c40,44
+< 
+---
+>     max_rows: usize,
+>     num_fixed_columns: usize,
+>     num_advice_columns: usize,
+>     num_instance_columns: usize,
+>     num_total_columns: usize,
+221a225,231
+>             max_rows: cs.minimum_rows(),
+>             num_advice_columns: cs.num_advice_columns,
+>             num_fixed_columns: cs.num_fixed_columns,
+>             num_instance_columns: cs.num_instance_columns,
+>             num_total_columns: cs.num_instance_columns
+>                 + cs.num_advice_columns
+>                 + cs.num_fixed_columns,
+393c403
+< }
+\ No newline at end of file
+---
+> }

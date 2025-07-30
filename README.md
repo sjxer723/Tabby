@@ -49,7 +49,7 @@ This will collect data for Table 1 (benchmark statistics), "Tabby" columns in Ta
 The following commands will run the Noir compiler on the Noir benchmark suite.
 ```shell
 cd /tabby/halo2_backend/
-cargo test --package noir_halo2_backend_pse --lib -- tests::test::test_circuits_native 
+cargo +1.82 test --package noir_halo2_backend_pse --lib -- tests::test::test_circuits_native 
 ```
 
 Once you see
@@ -74,12 +74,13 @@ The following commands will run the Circom compiler on the Circom benchmark suit
     
 ```shell
 cd /tabby/noir-halo2-backend/
-cargo test tests::test::circom -- --nocapture
+cargo +1.82 test tests::test::circom -- --nocapture
 ```
-
-The first benchmark may return an exception. We are actively working on fixing this issue, and anticipate that it will be fully resolved by the time the revised paper is submitted.
-
 
 ### Running the CirC compiler
 
-The reviewers have requested us to compare Tabby against the CirC compiler. The instructions for running the CirC compiler will be provided when we submit the revised version of the paper.
+The reviewers have requested us to compare Tabby against the CirC compiler. The following commands will run the Noir compiler on the Noir benchmark suite.
+```shell
+cd /tabby/noir-halo2-backend/
+cargo +1.82 test tests::test::circ -- --nocapture
+```
