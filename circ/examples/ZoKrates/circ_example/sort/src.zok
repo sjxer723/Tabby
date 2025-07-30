@@ -1,0 +1,18 @@
+def sort(field [100] words) -> field:
+    field out = 0
+    bool sgn = false
+
+    for u32 i in 0..100 do 
+        out = out + if sgn then words[i] else -words[i] fi
+        sgn = !sgn
+    endfor
+
+    return out
+
+
+def main(field [100] words) -> field:
+    field r = sort(words)
+
+    return r
+
+

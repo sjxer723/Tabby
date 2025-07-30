@@ -1,0 +1,8 @@
+def main(field [1000] x, field [1000] y) -> field: 
+    field out = 0
+
+    for u32 i in 0..1000 do 
+        out = out + x[i] * y[i]
+    endfor
+
+    return out

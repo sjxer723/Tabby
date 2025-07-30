@@ -1,0 +1,13 @@
+def has_ship(field coord, field [4096] ship_coords) -> field:
+    field collisions = 0
+
+    for u32 i in 0..4096 do 
+        collisions = collisions + if ship_coords[i] == coord then 1 else 0 fi
+    endfor
+
+    return collisions
+
+
+def main(field coord, field [4096] ship_coords) -> field:
+    field c = has_ship(coord, ship_coords)
+    return c

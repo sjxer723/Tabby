@@ -1,0 +1,10 @@
+def main(field x, field y) -> field:
+    field z = 0
+
+    for u32 i in 0..100 do
+        z = x + y
+        x = y
+        y = z
+    endfor
+
+    return x

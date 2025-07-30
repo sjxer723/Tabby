@@ -1,0 +1,19 @@
+(set_default_modulus 21888242871839275222246405745257275088548364400416034343698204186575808495617
+(let (
+(ships.0 #f1)
+(ships.1 #f1)
+(ships.2 #f1)
+(ships.3 #f2)
+(ships.4 #f2)
+(ships.5 #f1)
+(ships.6 #f3)
+(ships.7 #f3)
+(ships.8 #f1)
+(ships.9 #f4)
+(ships.10 #f4)
+(ships.11 #f1)
+(ships.12 #f5)
+(ships.13 #f5)
+(ships.14 #f1)
+) true; ignored
+))

@@ -1,0 +1,26 @@
+def has_ship(field coord, field[25] ship_coords) -> field:
+    field collisions = 0
+    for u32 i in 0..25 do
+        collisions = collisions + (if ship_coords[i] == coord then 1 else 0 fi)
+    endfor
+    return collisions
+    
+
+def main(field[5] lengths, field[15] ships) -> field:
+    field collisions = 0
+    field[25] ship_coords = [
+        100,100,100,100,100,
+        100,100,100,100,100,
+        100,100,100,100,100,
+        100,100,100,100,100,
+        100,100,100,100,100
+    ]
+
+    for field i in 0..5 do
+        for field j in 0..5 do
+            collisions = collisions + if lengths[i] > j then has_ship(ships[i*3] + ships[i*3+1] * 10 + if ships[i*3+2] == 1 then 10 * j else j fi, ship_coords) else 0 fi
+            ship_coords[i * 5 + j] = ships[i*3] + ships[i*3+1] * 10 + if ships[i*3+2] == 1 then 10 * j else j fi
+        endfor
+    endfor
+
+    return collisions

@@ -1,0 +1,26 @@
+def check_for_hit(field[5] lengths, field[15] ships, field[2] shot) -> field:
+    field shot_coord = shot[0] + shot[1] * 10
+    field hits = 0
+
+    for u32 i in 0..5 do
+        for field j in 0..5 do
+            field coord = 0
+            coord = if ships[i*3+2] == 1 then ships[i*3] + ships[i*3+1] * 10 + 10 * j else ships[i*3] + ships[i*3+1] * 10 + j fi
+
+            // Accumulate hits
+            hits = hits + if lengths[i] == j then (if coord == shot_coord then 1 else 0 fi) else 0 fi 
+        endfor
+    endfor
+
+    return if hits != 0 then 1 else 0 fi
+
+// Main circuit function to check if a shot is a hit
+def main(field[15] ships, field[2] shot, field any_hit) -> bool:
+    field[5] lengths = [5, 4, 3, 3, 2]
+    field hits = 0
+
+    // Check whether shot is a hit
+    hits = check_for_hit(lengths, ships, shot)
+    
+    // Assert if the hit result matches the input
+    return if hits == any_hit then true else false fi

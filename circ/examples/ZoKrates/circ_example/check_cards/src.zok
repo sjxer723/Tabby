@@ -1,0 +1,19 @@
+def main(field [100] a) -> bool:
+    field s = 1
+    for field k in 0..1 do 
+        field p = 1
+        for field j in 0..100 do 
+            p = p * (k - a[j]) 
+        endfor
+        s = s + p
+    endfor        
+
+    field p = 1
+    for field j in 1..100 do 
+        p = p * a[j]
+    endfor
+
+    assert(p == 0)
+    assert(s == 1)
+
+    return true

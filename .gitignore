@@ -1,0 +1,17 @@
+./circ/target
+./circ//pf
+./circ/assignment.txt
+./circ/params
+./circ/__pycache__
+./circ/P
+./circ/V
+./circ/pi
+./circ/x
+./circ/perf.data*
+./circ/heaptrack.*
+./circ/flamegraph.*
+./circ/.gdb_history
+./circ/.features.txt
+./circ/.mode.txt
+./circ/scripts/aby_tests/tests
+./circ/flamegraph*.svg
