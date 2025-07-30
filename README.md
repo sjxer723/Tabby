@@ -74,7 +74,7 @@ The following commands will run the Circom compiler on the Circom benchmark suit
     
 ```shell
 cd /tabby/noir-halo2-backend/
-cargo +1.82 test tests::test::circom -- --exact -- --nocapture
+cargo +1.82 test tests::test::circom -- --nocapture -- --exact 
 ```
 
 ### Running the CirC compiler
@@ -82,5 +82,5 @@ cargo +1.82 test tests::test::circom -- --exact -- --nocapture
 The reviewers have requested us to compare Tabby against the CirC compiler. The following commands will run the Noir compiler on the Noir benchmark suite.
 ```shell
 cd /tabby/noir-halo2-backend/
-cargo +1.82 test tests::test::circ -- --exact -- --nocapture
+cargo +1.82 test tests::test::circ -- --nocapture -- --exact
 ```
