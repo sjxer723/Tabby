@@ -16,8 +16,3 @@
 >             num_total_columns: cs.num_instance_columns
 >                 + cs.num_advice_columns
 >                 + cs.num_fixed_columns,
-393c403
-< }
-\ No newline at end of file
----
-> }
