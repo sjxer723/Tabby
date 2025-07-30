@@ -63,8 +63,3 @@ WORKDIR /tabby
 RUN rustup install 1.82
 RUN git clone https://github.com/iden3/circom.git
 RUN (cd circom; cargo +1.82 build --release; cargo +1.82 install --path circom)
-
-
-# Fix halo2 cost
-RUN HALO2_PROOF_DIR=$(find ~/.cargo/git/checkouts/ -type d -name 'halo2_proofs' | head -n 1) && \
-    patch "$HALO2_PROOF_DIR/src/dev/cost.rs" < fix.patch
